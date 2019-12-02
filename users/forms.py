@@ -10,6 +10,12 @@ class UserRegister(UserCreationForm):
         model = User
         fields = ['username','email','password1','password2']
         
+    def __init__(self, *args, **kwargs):
+        super(UserRegister, self).__init__(*args, **kwargs)
+
+        for fieldname in ['username', 'password1', 'password2']:
+            self.fields[fieldname].help_text = None
+        
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
 

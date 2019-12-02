@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'blog',
     'users',
     'crispy_forms',
-]
+    'bootstrap4',
+ ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
